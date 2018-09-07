@@ -1,0 +1,10 @@
+import re
+
+file = open("text.txt", "r")
+data = file.read()
+print (data)
+world = re.compile('\w+').findall(data.lower()) #массив токенов
+text = data.split(" ")
+print (world)
+
+vocab = list(set(world))
